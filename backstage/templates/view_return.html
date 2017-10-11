@@ -1,0 +1,33 @@
+$def with (orders)
+
+
+<h1>View Return Orders</h1>
+
+<ul>
+<br>
+</br>
+
+$for order in orders:
+    <li>
+		$code:
+			if order.return_office==1:
+				ro = 'Shanghai'
+			elif order.return_office==2:
+				ro = 'Guangzhou'
+			elif order.return_office==3:
+				ro = 'Beijin'
+			elif order.return_office==4:
+				ro = 'Fujian'
+
+		Return ID: $order.return_id
+		Reserve ID: $order.reserve_id
+        Vehicle license: $order.vehicle_liscense
+		Return Time: $order.return_time
+		@$ro 
+		Remain Gas: $order.gas_remain
+		Price: $order.price
+
+
+			        
+    </li>
+</ul>

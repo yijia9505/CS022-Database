@@ -1,0 +1,17 @@
+$def with (vehicles)
+
+<h1>Vehicle List</h1>
+
+<ul>
+<br>
+</br>
+$for vehicle in vehicles:
+    <li>
+        Office name: $vehicle.city
+		Vehicle Type: $vehicle.type
+        Liscense: $vehicle.liscense
+		Distance: $vehicle.distance
+		Gas capacity: $vehicle.gas_capacity
+		<a href="/reserve/$vehicle.liscense">Reserve It.</a>
+    </li>
+</ul>

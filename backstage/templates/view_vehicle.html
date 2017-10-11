@@ -1,0 +1,23 @@
+$def with (vehicles)
+
+<h1>Vehicle List</h1>
+
+<ul>
+<br>
+</br>
+$for vehicle in vehicles:
+    <li>
+		$ price = vehicle.price/2
+        Office name: $vehicle.city
+		Vehicle Type: $vehicle.type
+        Liscense: $vehicle.liscense
+		Distance: $vehicle.distance
+		Gas capacity: $vehicle.gas_capacity
+		Buy year: $vehicle.buy_year
+		State:	$vehicle.stage
+		$if (vehicle.distance>10000) or (2016-vehicle.buy_year>=3):
+			<a href= "/sell_vehicle/$vehicle.liscense">Sell it with $$$price.</a>
+		
+		
+    </li>
+</ul>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Mining Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstarp-css -->
+<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstarp-css -->
+<!-- css -->
+<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+<!--// css -->
+<script src="/static/js/jquery-1.11.1.min.js"></script>
+<script src="/static/js/modernizr.custom.js"></script>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<div class="banner-content">
+			<div class="logo">
+				<a href="/index">Car Renting</a>
+			</div>
+			<div class="top-nav">
+				<span class="menu">MENU</span>
+				<ul class="nav1 cl-effect-15">
+					<li><a href="/index" class="active">Home</a></li>
+					<li><a href="/new_customer" data-hover="New Customer">New Customer</a></li>
+					<li><a href="/getreservation" data-hover="Get Reservation">Get Reservation</a></li>
+					<li><a href="/checkorder" data-hover="Check Order">Check Order</a></li>
+					<li><a href="/contactus" data-hover="Contact Us">Contact Us</a></li>
+				</ul>
+				<!-- script-for-menu -->
+					<script>
+						 $$( "span.menu" ).click(function() {
+						$$( "ul.nav1" ).slideToggle( 300, function() {
+						// Animation complete.
+							});
+							});
+					</script>
+				<!-- /script-for-menu -->
+			</div>
+			<div class="banner-slid">
+				<script src="/static/js/responsiveslides.min.js"></script>
+					<script>
+						// You can also use "$$(window).load(function() {"
+						$$(function () {
+						  // Slideshow 4
+						  $$("#slider3").responsiveSlides({
+							auto: true,
+							pager: true,
+							nav: false,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+							  $$('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+							  $$('.events').append("<li>after event fired.</li>");
+							}
+						  });
+					
+						});
+					</script>
+					<div  id="top" class="callbacks_container">
+						<ul class="rslides" id="slider3">
+							<li>
+								<div class="banner-info">
+									<h5>You can choose different car type</h5>
+									<p>We provide different types of cars, including Economy, Compact, Mid-size, Standard, Fullsize, Premium, Luxury, SUV, and Van...
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="banner-info">
+									<h5>Rent a car by telephone</h5>
+									<p>Beside order a car online, you can also rent a car by calling us. You can check our number at contact us. This service is provided for area that Internet is unavailabe.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div class="banner-info">
+									<h5> *** Project ONLY ***</h5>
+									<p>Do you know? This is only a project. You cannot actually rent any car from us. Also, if you have any advice, please do not contact us!
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+			</div>
+			<div class="header-address">
+				<ul>
+					<li>800 Dongchuan Rd</li>
+					<li class="phone-img">Ph : +86 1500000000</li>
+					<li><a href="mailto:example@email.com">E-mail : webster@onlinecarrent.com</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</html>

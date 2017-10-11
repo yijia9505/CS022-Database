@@ -1,0 +1,15 @@
+$def with (offices)
+
+<h1>Office List</h1>
+
+<ul>
+<br>
+</br>
+
+$for office in offices:
+    <li>
+        Office name: $office.city
+        Address: $office.address
+        <a href="/view_vehicle/$office.office_id">See vehilces in the office</a>
+    </li>
+</ul>

@@ -1,0 +1,24 @@
+$def with (orders)
+
+
+<h1>View Rent Orders</h1>
+
+<ul>
+<br>
+</br>
+
+$for order in orders:
+    <li>
+		
+
+		Rent ID: $order.rent_id
+		Reserve ID: $order.reserve_id
+        Vehicle license: $order.vehicle_liscense
+		Paid Price: $order.paid_price
+		Credit card: $order.card_id
+		
+
+
+			        
+    </li>
+</ul>

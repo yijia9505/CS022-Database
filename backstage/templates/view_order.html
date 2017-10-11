@@ -1,0 +1,47 @@
+$def with (orders,flag)
+
+
+<h1>View Reservation</h1>
+
+<ul>
+<br>
+</br>
+
+$for order in orders:
+    <li>
+		$code:
+			if order.get_office==1:
+				go = 'Shanghai'
+			elif order.get_office==2:
+				go = 'Guangzhou'
+			elif order.get_office==3:
+				go = 'Beijin'
+			elif order.get_office==4:
+				go = 'Fujian'
+			if order.return_office==1:
+				ro = 'Shanghai'
+			elif order.return_office==2:
+				ro = 'Guangzhou'
+			elif order.return_office==3:
+				ro = 'Beijin'
+			elif order.return_office==4:
+				ro = 'Fujian'
+		
+		Reserve ID: $order.reserve_id
+		Customer Phone: $order.customer_phone
+        Vehicle type: $order.type
+        Vehicle license: $order.vehicle_liscense
+		Get Time: $order.get_time  
+		@$go 
+		Return Time: $order.return_time
+		@$ro 
+		State: $order.state
+		$if (order.state == 'rent')&(flag!=1):
+			Paid Price: $order.pprice
+			Credit Card: $order.cardid
+		$if (order.state == 'finished')&(flag!=1):
+			Final Price: $order.pprice
+			Remain Gas: $order.gas
+			        
+    </li>
+</ul>
